@@ -8,7 +8,6 @@ app.use(express.json())
 
 
 app.get('/login', (req,res)=> {
-    console.log(req.query)
     if (req.query.name) {
         res.cookie('name', req.query.name)
         res.send(`User ${req.query.name} logged in`)
